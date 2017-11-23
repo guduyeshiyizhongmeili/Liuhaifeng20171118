@@ -25,8 +25,6 @@ import com.youth.banner.listener.OnBannerListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.media.CamcorderProfile.get;
-
 public class TwoActivity extends AppCompatActivity implements ProduceView {
     private List<String> titles;
     private List<String> imgs;
@@ -54,6 +52,7 @@ public class TwoActivity extends AppCompatActivity implements ProduceView {
         producePresenter.product();
         mrv=(RecyclerView)findViewById(R.id.recyc1);
         mSwitf = (SwipeRefreshLayout) findViewById(R.id.switf);
+
     }
 
     @Override

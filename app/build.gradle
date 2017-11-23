@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -29,6 +29,11 @@ repositories {
         dirs 'libs' //this way we can find the .aar file in libs folder
     }
 }
+greendao {
+    schemaVersion 1
+    daoPackage 'com.bwie.test.liuhaifeng20171118.gen'
+    targetGenDir 'src/main/java'
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -44,6 +49,7 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.youth.banner:banner:1.4.9'
+    compile 'org.greenrobot:greendao:3.2.0'
     compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
     compile 'com.android.support.test.espresso:espresso-core:2.2.2'
     compile(name: 'ijkplayer-java-release', ext: 'aar')
